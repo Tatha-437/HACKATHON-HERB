@@ -1,0 +1,54 @@
+
+intents:
+- greet
+- goodbye
+- mood_affirm
+- mood_deny
+- mood_great
+- mood_unhappy
+- inform
+- leave
+- askreport
+
+slots:
+  group:
+    type: text
+    
+entities:
+- group
+
+actions:
+- utter_greet
+- utter_did_that_help
+- utter_happy
+- utter_goodbye
+- utter_unclear
+- utter_ask_picture
+- utter_need_leave
+- utter_ask_report
+- __main__.ApiAction
+
+templates:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_unclear:
+  - text: "I am not sure what you are aiming for."
+  - text: "do you want a leave"
+  
+  utter_happy:
+  - text: "Great carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+  
+  utter_ask_picture:
+  - text: "To cheer you up, I can show you a cute picture of a dog, cat or a bird. Which one do you choose?"
+
+  utter_ask_report:
+    -text: "GO TO THE LINK www.google.com"
+  utter_need_leave:
+    -text: "Submit your leave at (https://forms.gle/Sgsp2J7B1kmYdLXe7)" 
